@@ -1,0 +1,181 @@
+/* Base styling for the toggle */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.theme-toggle input {
+  display: none;
+}
+
+.theme-toggle .slider {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  background-color: #f97e7e98;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle .slider::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #faf9f9;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+.theme-toggle input:checked + .slider::before {
+  transform: translateX(30px);
+  background-color: #403a3a;
+}
+
+.theme-toggle input:checked + .slider {
+  background-color: #fffefe;
+}
+
+/* Media Query: Move toggle above "About Me" on mobile */
+@media screen and (max-width: 768px) {
+  .theme-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 10px; /* Adjust to create a little space */
+  }
+  
+  /* Adjust the position for smaller screens */
+  section#about {
+    padding-top: 4rem; /* Create some space for the toggle */
+  }
+}
+
+/* Other styles */
+body {
+  transition: background-color 0.5s, color 0.5s;
+}
+
+body.dark {
+  background-color: #1c1c1c;
+  color: #eee;
+}
+
+body.dark nav {
+  background-color: #111;
+}
+
+body.dark header {
+  background-color: #222;
+  color: #fff;
+}
+
+body.dark .project {
+  background-color: #2c2c2c;
+  border-color: #444;
+}
+
+body.dark footer {
+  background-color: #111;
+  color: #ccc;
+}
+
+/* Gradient Header */
+header {
+  background: linear-gradient(135deg, #1b1c1b, #48c9b0);
+  color: #fff;
+  text-align: center;
+  padding: 5rem 0;
+  transition: background 0.5s;
+}
+
+/* Resume Link Styling */
+.resume-link {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #5ce3fb;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.resume-link:hover {
+  background-color: #069dae;
+  transform: scale(1.05);
+}
+
+/* Project card hover animation */
+.project {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Fade-in animation */
+section, header, footer {
+  animation: fadeIn 1s ease-in-out both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navigation styles */
+nav {
+  background-color: #333;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: #f8f7f7;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color:  #FFD700;
+  color: #fff;
+  border-color: #070e6d;
+  transform: scale(1.05);
+}

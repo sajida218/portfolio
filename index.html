@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sajida - Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Dark Mode Toggle -->
+<div class="theme-toggle">
+  <label>
+    <input type="checkbox" id="toggle-dark" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header>
+    <h1>Sajida</h1>
+    <p>Web Developer | Designer | Creator</p>
+  </header>
+
+  <!-- About Me Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      <strong>Name:</strong> Shaik Sajida<br />
+      <strong>Location:</strong> Vijayawada, Andhra Pradesh 520007
+    </p>
+    <p>
+      <a href="assets/resume.pdf" target="_blank" class="resume-link">📄 View My Resume</a>
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Project Title</h3>
+      <p>Description of the project, technologies used, and your role.</p>
+    </div>
+    <!-- Add more projects here -->
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      <strong>Address:</strong> Vijayawada, Andhra Pradesh 520007<br />
+      <strong>Phone:</strong> 📞 6301571739<br />
+      <strong>Email:</strong> <a href="mailto:Sajdask2006@gmail.com">Sajdask2006@gmail.com</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sajida. All rights reserved.</p>
+  </footer>
+  <script>
+    const toggle = document.getElementById('toggle-dark');
+    toggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+  
+</body>
+</html>
