@@ -193,7 +193,7 @@ nav ul li a:hover {
   margin-top: 1rem;
 }
 
-.skill {
+.skills {
   padding: 0.8rem 1.5rem;
   background-color: #5ce3fb;
   color: white;
@@ -202,16 +202,37 @@ nav ul li a:hover {
   transition: transform 0.3s, background-color 0.3s;
 }
 
-.skill:hover {
+.skills:hover {
   background-color: #069dae;
   transform: scale(1.05);
 }
 
 /* Dark mode support */
-body.dark .skill {
+body.dark .skills {
   background-color: #2c88a8;
 }
 
-body.dark .skill:hover {
+body.dark .skills:hover {
   background-color: #3fb7d6;
 }
+.contact-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #FFD700;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact-details {
+  font-size: 1rem;
+  color: #bf1a1a;
+}
+
+
