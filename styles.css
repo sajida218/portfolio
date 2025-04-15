@@ -219,6 +219,7 @@ body.dark .skills:hover {
   display: flex;
   align-items: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .profile-pic {
@@ -232,7 +233,20 @@ body.dark .skills:hover {
 
 .contact-details {
   font-size: 1rem;
-  color: #bf1a1a;
+  color: #cd3434;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-pic {
+    margin-bottom: 1rem;
+  }
 }
 
 
