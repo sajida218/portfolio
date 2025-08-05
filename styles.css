@@ -258,58 +258,33 @@ body.dark .skills {
 body.dark .skills:hover {
   background-color: #3fb7d6;
 }
-.Certificates{
-  display: inline-block;
-  margin-top: 1rem;
-  background: linear-gradient(135deg, #06beb6, #48b1bf);
-  color: white;
-  padding: 0.6rem 1.4rem;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 15px rgba(72, 177, 191, 0.4);
-  transition: all 0.4s ease;
+.cirtifications a {
   position: relative;
-  overflow: hidden;
-  z-index: 1;
+  text-decoration: none;
+  color: #007BFF;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
 
-}
-.Certificates{
-  display: inline-block;
-  margin-top: 1rem;
-  background: linear-gradient(135deg, #06beb6, #48b1bf);
-  color: white;
-  padding: 0.6rem 1.4rem;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s ease;
-  box-shadow: 0 4px 12px rgba(72, 177, 191, 0.4);
-  z-index: 1;
-}
-.Certificates::before {
+/* Animated underline from right to left */
+.cirtifications a::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: -100%;
+  right: 0;           /* Start from the right */
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #ff5500;
+  transition: width 0.3s ease;
+}
+
+
+.cirtifications a:hover::after {
   width: 100%;
-  height: 100%;
-  background: linear-gradient(120deg, #df6cd2, #30c7c7);
-  transition: all 0.4s ease;
-  z-index: -1;
-}
-
-.Certificates::before {
   left: 0;
+  right: auto;
 }
 
-.Certificates {
-  color: #fff;
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(255, 110, 196, 0.3);
-}
 .project-container {
   display: flex;
   align-items: center;
